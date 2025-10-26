@@ -17,7 +17,7 @@ function App() {
   const [activeTab, setActiveTab] = useState("upload"); // upload, history, trends
   const [loading, setLoading] = useState(false);
 
-  const SPOONACULAR_API_KEY = "1c47fa8789ce41beacaae9b461cafde6" // replace with your key
+  const SPOONACULAR_API_KEY = "your_api_key_here" // replace with your key
 
   useEffect(() => {
     if (activeTab === "history") {
