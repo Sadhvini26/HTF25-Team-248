@@ -1,0 +1,33 @@
+new item > enter project name > select free style > ok
+scroll and check git and give repo url
+scroll and enter branch name
+scroll and under build steps and click add build steps select invoke top level maven projects
+	maven version: maven_home
+	goals: clean
+again click on add build step and select invoke top level maven projects
+	maven version: maven_home
+	goals: install
+under post build actions:
+files to archive: **/*
+add post build item: build other projects: enter other project name(which is not created yet)
+check trigger only if build is stable
+click apply and save
+
+go back and click on new item and create the other project which was not created before and enter project name and click freestyle
+need not check git
+under build environment check delete workspace before build starts
+under build steps> add build step > copy artifacts from another project and enter the first project name check stable build only
+artifacts to copy: **/*
+go down click add build step > invoke top level maven targets:
+	maven version: maven_home
+	goals: test
+under post build > add post-build>archive the arifacts>**/* 
+click apply and save
+
+in dashboard click on Jenkins pipeline and click on +
+and enter name for pipeline and check build pipeline view
+create
+select the first project under select intial job
+apply ok
+
+then click on RUN

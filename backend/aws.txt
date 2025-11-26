@@ -1,0 +1,192 @@
+Step d: Run the pasted ssh -i command in the terminal
+
+sudo apt update
+sudo apt-get install docker.io
+sudo apt install git
+Sudo apt install nano
+
+Step a: Create basic index.html file in folder Example and save it
+
+Step b: Open git Bash in folder Example by right clicking with mouse
+
+Step c: In git bash run the following commands
+git init
+git add .
+Git commit –m “first commit”
+
+Step d: Create git repository (here with name AWS)
+
+Step e: Copy command one by one from above repository and run as below
+git branch –M main
+git remote add origin <https url>
+git push –u origin main
+
+Step f:  refresh repository and You can now see index.html in GitHub
+
+Step g:  Copy http path
+
+Step h:  Clone the repository with copied http path by command in command prompt         git clone <copied http url>
+Step i:  Navigate to the cloned folder. Type cd AWS as below, next ls to 
+
+
+Step j:  create Dockerfile in above command prompt in ububtu ie in power shell
+        Nano Dockerfile
+ 
+
+Step k:  Write the following data in Dockerfile and click ctrl+o  Enter and then ctrl-x
+ 
+
+Step L:  Build docker image by executing the following command
+                sudo docker build –t mywebapp .
+
+ 
+Thus image is created
+Step m:  run the image and map it to port 80 
+  sudo docker run –d –p 80:80 mywebapp
+
+ 
+
+Step n:  Go to instances and click on instance here
+
+ 
+
+Step o:  Copy public ipv4 address
+
+ 
+ 
+Step p:  Paste it in the browser to get below output
+Note : if https :__ won’t work then type just http:___
+ 
+
+Important   do it without fail.   
+ Step Q:  stop container 
+
+Run the following command to stop the container
+i.	sudo docker ps
+ii.	sudo docker stop <container-id>
+
+ 
+iii.	Go back to instances and click on option instance. Once load as below, then Click on Instance state and select terminate instances
+ 
+Click on Terminated (deleted)
+ 
+
+iv.	Now click on End lab
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2 MAVEN WEB PROJECT DEPLOYMENT IN AWS
+
+Click on start lab
+ 
+
+Click on AWS
+ 
+
+Click on EC2
+ 
+Click on launch instance
+ 
+Give name
+ 
+
+Create new key
+ 
+
+Check all the boxes under network and click  on launch instance
+ 
+
+Click on instances
+ 
+
+Wait until you get 2 tests passes
+ 
+
+Click on connect after checking the box
+ 
+
+Copy ssh command
+ 
+
+Open the terminal, Navigate to the path 
+ 
+
+Run the ssh command
+ 
+Run the following commands
+ 
+ 
+ 
+ 
+
+Open MAVEN WEB PROJECT REPO in github and copy http link
+ 
+
+Clone the repository
+ 
+
+If your repository is in main run following
+ 
+
+If not goto your github repo 
+Click on settings
+Under default branch section click on the icon shown and you’re your master branch as default and execute above commands
+ 
+
+ 
+
+ 
+
+Build docker image
+ 
+
+Run the container
+
+ 
+
+Copy public ipv4
+ 
+
+Enter this url in browser and click enter
+ 
+
+If your app is not running goto security  and Click on security groups
+
+ 
+          
+
+
+      Click on edit inbound rules
+
+ 
+
+Click on add rule give port as 9090 and 0.0.0.0/0 click on save
+ 
+
+And refresh the page to check whether the web page has loaded or not
+ 
+
+If it is loaded you have successfully deployed you maven web project In your ec2 instance
+
+
+Run the following commands to stop the container 
+
+Terminate your instance
+ 
+
+End your lab
+
